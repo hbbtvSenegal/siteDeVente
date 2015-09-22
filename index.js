@@ -1,3 +1,13 @@
+/*
+* copyright: HbbTV-Senegal
+* 
+*
+*/
+
+/*
+* Ce fichier est le premier fichier de l'application.
+* 
+*/
 
 var http = require('http');
 var url = require('url');
@@ -16,7 +26,7 @@ function returnResponse(url, response)
     var AntieFramework = require('./antie/node/antieframework.js');
 
 	// Set up application ID and path to framework configuration directory
-	var application_id = "sampleapp";
+	var application_id = "vente";
 	var configPath = "antie/config";
 	var frameworkPath = "antie/config/framework/";
 
@@ -82,7 +92,7 @@ function returnResponse(url, response)
 			response.write("var require = {");
 				response.write("baseUrl: '',");
 				response.write("paths: {");
-					response.write(application_id + ": 'static/script',");
+					response.write(application_id + ": './',");
 					response.write("antie : 'antie/static/script'");
 				response.write("},");
 				response.write("priority: [],");
@@ -110,17 +120,17 @@ function returnResponse(url, response)
 	response.write("<script type='text/javascript'>");
 	response.write("require(");
 	response.write("[");
-			response.write("'sampleapp/appui/sampleapp'");
+			response.write("'vente/init'");
 	response.write("],");
 
-			response.write("function(SampleApp) {");
+			response.write("function(Init) {");
 					response.write("require.ready(function() {");
 						response.write("function onReady() {");
 							response.write("var staticLoadingScreen = document.getElementById('static-loading-screen');");
 							response.write("staticLoadingScreen.parentNode.removeChild(staticLoadingScreen);");
 						response.write("};");
 
-						response.write("new SampleApp(");
+						response.write("new Init(");
 								response.write("document.getElementById('app'),");
 								response.write("'static/style/',");
 								response.write("'static/img/',");
@@ -169,5 +179,5 @@ http.createServer(function (req, res) {
 
         break;
 	}
-}).listen(1337, '127.0.0.1');
-console.log('Server running at http://127.0.0.1:1337/');
+}).listen(1600, '127.0.0.1');
+console.log('Server running at http://127.0.0.1:1600/');

@@ -17,7 +17,7 @@ require('antie/php/antieframework.php');
 $javascript_cache_busting = true;
 
 // Set up application ID and path to framework configuration directory
-$application_id = "sampleapp";
+$application_id = "vente";
 $antie_config_path = 'antie/config';
 
 // Create an AntieFramework instance
@@ -79,7 +79,7 @@ echo $antie->getRootHtmlTag($device_configuration_decoded);
         var require = {
             baseUrl: "",
             paths: {
-                <?php echo $application_id; ?>: 'static/script',
+                <?php echo $application_id; ?>: './',
                 antie : "antie/static/script"
             },
             priority: [],
@@ -128,9 +128,9 @@ echo $antie->getRootHtmlTag($device_configuration_decoded);
 <script type='text/javascript'>
     require(
             [
-                'sampleapp/appui/sampleapp'
+                'vente/init'
             ],
-            function(SampleApp) {
+            function(Init) {
 
                 require.ready(function() {
                     function onReady() {
@@ -138,7 +138,7 @@ echo $antie->getRootHtmlTag($device_configuration_decoded);
                         staticLoadingScreen.parentNode.removeChild(staticLoadingScreen);
                     };
 
-                    new SampleApp(
+                    new Init(
                             document.getElementById('app'),
                             'static/style/',
                             'static/img/',
