@@ -6,23 +6,22 @@ require.def("vente/js/app",
 		"antie/widgets/verticallist", 
 		"antie/widgets/horizontallist", 
 		"antie/widgets/label",
-		"antie/widgets/horizontalcarousel"
+		"antie/widgets/horizontalcarousel",
+		"antie/datasource",
+		"vente/static/datasources/produitdatasource",
+		"vente/static/formatters/produitformatter"
 	], 
-	function(Component, Button, Container, VerticalList, HorizontalList, Label, HorizontalCarousel){ 
+	function(Component, Button, Container, VerticalList, HorizontalList, Label, HorizontalCarousel, DataSource, ProduitSource, ProduitFormatter){ 
 		return Component.extend({ 
 			init: function(){ 
 			var self = this; 
 			this._super("vente"); 
 
-			this.appendChildWidget(new Label("Bonjout"))
-			var carousel = new HorizontalCarousel("carouselProduits");
-			var bouton1 = new Button("id_produit1");
-			var bouton2 = new Button("id_bouton2");
-			bouton1.appendChildWidget(new Label("idLabelBouton1", "Chemise"));
-			bouton2.appendChildWidget(new Label("Tishirt"));
+			
+			this._produitsource = new DataSource(this, new ProduitSource(), "loadData");
+			this._produitformater = new ProduitFormatter();
 
-			carousel.appendChildWidget(bouton1);
-			carousel.appendChildWidget(bouton2);
+			var carousel = new HorizontalCarousel("carouselProduits", this._produitformater, this._produitsource);
 
 			self.appendChildWidget(carousel);
 
