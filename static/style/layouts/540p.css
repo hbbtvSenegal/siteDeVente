@@ -1,0 +1,15 @@
+
+/* RESOLUTION SPECIFIC STYLES - 960px X 540px */
+/* Application in Center-Middle of Screen (achieved by positioning 50% down from top AND shifting back up to origin by half height) */
+#app {
+    position: relative;
+    overflow: hidden;
+    width: 960px;
+    height: 540px;
+    top: 50%;
+    margin: -270px auto 0 auto;
+    background-image: url(../../img/bbc_background_540.png);
+    background-repeat: no-repeat;
+    background-color: red;
+}
+
