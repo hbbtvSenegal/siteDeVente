@@ -90,9 +90,9 @@ function returnResponse(url, response)
 
 	response.write("<script type='text/javascript'>");
 			response.write("var require = {");
-				response.write("baseUrl: '',");
+				response.write("baseUrl: './',");
 				response.write("paths: {");
-					response.write(application_id + ": './',");
+					response.write(application_id + ": '.',");
 					response.write("antie : 'antie/static/script'");
 				response.write("},");
 				response.write("priority: [],");
@@ -133,7 +133,7 @@ function returnResponse(url, response)
 						response.write("new Init(");
 								response.write("document.getElementById('app'),");
 								response.write("'static/style/',");
-								response.write("'static/img/',");
+								response.write("'static/image/',");
 								response.write("onReady");
 						response.write(");");
 					response.write("});");
