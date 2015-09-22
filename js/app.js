@@ -1,4 +1,4 @@
-require.def("exemple/monAppli", 
+require.def("vente/js/app", 
 	[ 
 		"antie/widgets/component", 
 		"antie/widgets/button", 
@@ -11,7 +11,7 @@ require.def("exemple/monAppli",
 		return Component.extend({ 
 			init: function(){ 
 			var self = this; 
-			this._super("monAppli"); 
+			this._super("vente"); 
 			//on cree les boutons et on ajoute a chaque bouton une Label 
 			var jaune = new Button("jaune"); 
 			jaune.appendChildWidget(new Label("Jaune")); 

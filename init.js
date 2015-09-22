@@ -22,7 +22,7 @@
             run: function() { 
                 this._setRootContainer(); 
                 // créer un conteneur principale dans le conteneur racine et y ajouter un composant simple (ce module sera la base de notre application) 
-                this.addComponentContainer("maincontainer", "vente/app"); 
+                this.addComponentContainer("maincontainer", "vente/js/app"); 
 	// ''maincontainer'' est l'id du conteneur principale ajouté 
             } 
         });     
