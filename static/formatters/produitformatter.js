@@ -5,21 +5,55 @@ require.def("vente/static/formatters/produitformatter",
 		"antie/widgets/label", 
 		"antie/widgets/image" 
 	], 
-	function(Formatter,  Button, Label, Image){ 
+	function(Formatter, Button, Label, Image){ 
+		"use strict";
 		return Formatter.extend({ 
-			format: function(iterateur){ //prend en paramètre l'iterateur
-				var item = iterateur.next(); //un élément de données  DataSource
-				var bouton  = new Button("produit"+item.id); 
-				//si on veut insérer une image et un label
-				bouton.appendChildWidget(new Image("img-id",item.img, {width:150, height:100})); 
-				bouton.appendChildWidget(new Label("acheter")); 
+
+
+			init: function(application, details){
+                this._super();
+                this._application = application;
+                this._device = this._application.getDevice();
+
+                this._componentTexte = details;
+                var self = this;
+            },
+
+			format: function(iterateur){
+				var self = this;
+
+				var item = iterateur.next();
+
+				var bouton  = new Button("produit"+item.id);
+				bouton.addClass("produitProduit");
+				var image = new Image("img-id",item.img, {width:150, height:100});
+				bouton.appendChildWidget(image); 
+				bouton.appendChildWidget(new Label("Voir")); 
 
 				bouton.addEventListener("select", function(evt){
-					document.location.href = item.lien;
+					//self._application.pushComponent("maincontainer", item.fichier);
+					//console.log(item);
+					self._application.pushComponent("maincontainer", item.fichier);
 				});
 
-				//retourner le bouton
+				bouton.addEventListener("focus", function(evt){
+                    bouton.addClass("produitFocus");
+                    image.addClass("imageFocus");
+                  	self._componentTexte.texte.setText(item.details);
+
+                });
+
+                bouton.addEventListener("blur", function(evt){
+                    bouton.removeClass("produitFocus");
+                    image.removeClass("imageFocus");
+                });
+
+                bouton.addEventListener("keydown", function(evt){
+
+                });
+
 				return bouton;
-			} 
-		} ); 
-	} );
+			}
+		}); 
+	} 
+);

@@ -1,1 +1,20 @@
-Cette application est une site de vente en ligne
+Cette application est une site de vente en ligne.
+
+
+
+Fontionnalités:
+-> categories de services de vente en ligne:
+	-> villa
+	-> habillement
+	-> gadgets
+	-> voitures
+	
+-> liste des produits
+	-> pour chaque produit, 
+		-> un bouton commander qui redirige vers le site de vente correspondant
+		-> un bouton details qui donne des details sur le produit
+-> 3 types de sites de vente (comme exemples)
+	-> menu: accueil, produits, etc.
+	-> formulaire de commande d'un produit
+
+Documentation: Toute la documentation est disponible dans le dossir docs.

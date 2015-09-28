@@ -2,15 +2,15 @@
 *
 */
 
-require.def("vente/static/composants/bouton",
+require.def("vente/static/composants/texte",
 	[
-		"antie/widgets/button",
+		"antie/widgets/textpager",
 		"antie/events/keyevent"
 	],
-	function(Button, KeyEvent){
+	function(TextPager, KeyEvent){
 		'use strict';
 		
-		return Button.extend({
+		return TextPager.extend({
 			//constructeur
 			init: function(id){
 				var self = this;
