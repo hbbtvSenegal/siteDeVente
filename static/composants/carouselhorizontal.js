@@ -5,7 +5,7 @@ require.def("vente/static/composants/carouselhorizontal",
 	function(Carousel){
 		return Carousel.extend({
 			init: function(id, formatter, datasource, animation, modeWrap){
-				var self =this;
+				var self = this;
 				this._super(id, formatter, datasource);
 				this._modeWrap = modeWrap;
 				self._setConfig();
@@ -20,7 +20,23 @@ require.def("vente/static/composants/carouselhorizontal",
 			},
 
 			_setConfig: function(){
-				this.setWrapMode(Carousel.WRAP_MODE_NAVIGATION_ONLY);
+				this._setNavigation();
+				this.setRenderMode(2); //element UL
+				
+			},
+
+			_setNavigation: function(modeWrap){
+				switch(modeWrap){
+					case "infinie":
+						this.setWrapMode(Carousel.WRAP_MODE_VISUAL);
+						break;
+					case "finie":
+						this.setWrapMode(Carousel.WRAP_MODE_NAVIGATION_ONLY);
+						break;
+					default:
+						this.setWrapMode(Carousel.WRAP_MODE_NAVIGATION_ONLY);
+						break;
+				}
 			}
 
 

@@ -238,11 +238,7 @@ initial element background in the base stylesheet, not in dynamically loaded sty
     width:100px;
     height: 100px;
 }
-.produitFocus
-{
-    width: 300px;
-    height: 300px;
-}
+
 .imageFocus
 {
     width: 300px;
@@ -260,4 +256,66 @@ initial element background in the base stylesheet, not in dynamically loaded sty
     background-color: red;
 }
 
-/* categories des services de vente */
+/* categories des services de vente 
+.produitBouton
+{
+    display: inline-block;
+   /* width: 112px;
+    height: 165px;
+    width: 100px;
+    height: 100px;
+    transform: rotateY(45deg);
+    background: orangered;
+
+}
+
+ l'element central 
+.produitBouton:nth-child(3){
+    transform: rotateY(0deg) scale(1.2);
+}
+
+/* les elements qui suivent l'element central 
+#carouselProduits li:nth-child(3) ~ li{
+    transform: rotateY(-45deg);
+}*/
+
+
+ul
+{
+    padding: 10px;
+    perspective: 20000px;
+}
+.produitFocus
+{
+   /* width: 300px;
+    height: 300px;*/
+    transform: rotateY(0deg) scale(1.2);
+}
+ul li
+{
+    display: inline-block;
+    background: orangered
+    transform: rotateY(-85deg);
+    margin-right: -15px;
+    transition: all .45s;
+    padding: 10px;
+}
+/* 
+ul li:nth-child(3){
+    transform: rotateY(0deg) scale(1.2);
+}
+
+les elements qui suivent l'element central 
+ul li:nth-child(3) ~ li{
+    transform: rotateY(-45deg);
+}
+*/
+/* l'élément survolé */
+.produitFocus:focus{
+    transform: rotateY(0deg) scale(1.2);
+}
+/* les elements qui suivent l'element survole */
+
+li:focus ~ li{
+    transform: rotateY(85deg);
+}
