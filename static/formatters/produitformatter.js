@@ -25,8 +25,8 @@ require.def("vente/static/formatters/produitformatter",
 				var item = iterateur.next();
 
 				var bouton  = new Button("produit"+item.id);
-				bouton.addClass("produitProduit");
-				var image = new Image("img-id",item.img, {width:150, height:100});
+				bouton.addClass("produitBouton");
+				var image = new Image("img-id", item.img, {width:100, height:100});
 				bouton.appendChildWidget(image); 
 				bouton.appendChildWidget(new Label("Voir")); 
 

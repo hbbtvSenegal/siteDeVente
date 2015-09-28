@@ -25,6 +25,7 @@ require.def("vente/js/ventehabillement",
 		Texte
 		){ 
 		return Component.extend({ 
+			
 			init: function(){ 
 				var self = this; 
 				this._super("ventehabillement"); 

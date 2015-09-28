@@ -1,6 +1,13 @@
 {
-	version: 1.0,
-	author:[
-		abdoulaye KAMA <abdoulayekama@gmail.com>,
+	version: "1.0",
+	authors: [
+		"abdoulaye KAMA <abdoulayekama@gmail.com>",
+		"mamadou oury DIALLO<>",
+		"bassirou NGOM <>"
+	],
+	dependancies : [
+		"php5",
+		"ajax",
+		"jquery"
 	]
 }
