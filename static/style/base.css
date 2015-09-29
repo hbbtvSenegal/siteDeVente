@@ -233,11 +233,7 @@ initial element background in the base stylesheet, not in dynamically loaded sty
     height: 200px;
 }
 
-.produitBouton
-{
-    width:100px;
-    height: 100px;
-}
+
 
 .imageFocus
 {
@@ -280,42 +276,42 @@ initial element background in the base stylesheet, not in dynamically loaded sty
 }*/
 
 
-ul
+#carouselProduits
 {
-    padding: 10px;
+    padding: 0px;
     perspective: 20000px;
+    height: 200px;
 }
+
+.produitBouton
+{
+    width:100px;
+    height: 100px;
+    display: inline-block;
+    background: orangered;
+    transform: rotateY(-45deg);
+    margin-right: 25px;
+    transition: all .45s;
+    padding: 0px;
+}
+
 .produitFocus
 {
-   /* width: 300px;
-    height: 300px;*/
-    transform: rotateY(0deg) scale(1.2);
+
+    transform: rotateY(0deg) scale(1.4);
+    
 }
-ul li
+
+
+.produitFocus ~ .produitDroite
 {
-    display: inline-block;
-    background: orangered
-    transform: rotateY(-85deg);
-    margin-right: -15px;
-    transition: all .45s;
-    padding: 10px;
-}
-/* 
-ul li:nth-child(3){
-    transform: rotateY(0deg) scale(1.2);
+    transform: rotateY(45deg);
 }
 
-les elements qui suivent l'element central 
-ul li:nth-child(3) ~ li{
-    transform: rotateY(-45deg);
+.produitDroite
+{
+    transform: rotateY(45deg);
 }
-*/
-/* l'élément survolé */
-.produitFocus:focus{
-    transform: rotateY(0deg) scale(1.2);
-}
-/* les elements qui suivent l'element survole */
-
-li:focus ~ li{
-    transform: rotateY(85deg);
+#carouselProduits:focus .produitBouton:not(:focus){
+    transform: rotateY(45deg);
 }

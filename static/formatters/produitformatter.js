@@ -33,20 +33,26 @@ require.def("vente/static/formatters/produitformatter",
 				bouton.addEventListener("select", function(evt){
 					//self._application.pushComponent("maincontainer", item.fichier);
 					//console.log(item);
-					self._application.pushComponent("maincontainer", item.fichier);
+					self._application.pushComponent("maincontainer", "vente/js/article", {_source: item.source});
 				});
 
 				bouton.addEventListener("focus", function(evt){
                     bouton.addClass("produitFocus");
                     image.addClass("imageFocus");
                   	self._componentTexte.texte.setText(item.details);
+                  	var suivant = getChildWidget("produit"+(parseInt(item.img)+1));
+                  	suivant.addClass("produitDroite");
 
                 });
 
                 bouton.addEventListener("blur", function(evt){
                     bouton.removeClass("produitFocus");
                     image.removeClass("imageFocus");
+                    //var suivant = getChildWidget("produit"+(parseInt(item.img)+1));
+                  	//suivant.addClass("produitDroite");
                 });
+
+
 
                 bouton.addEventListener("keydown", function(evt){
 

@@ -21,11 +21,13 @@ require.def("vente/static/composants/carouselhorizontal",
 
 			_setConfig: function(){
 				this._setNavigation();
-				this.setRenderMode(2); //element UL
+				//this.setRenderMode(2); //element UL
 				
 			},
 
 			_setNavigation: function(modeWrap){
+				this._modeWrap = modeWrap;
+				
 				switch(modeWrap){
 					case "infinie":
 						this.setWrapMode(Carousel.WRAP_MODE_VISUAL);
