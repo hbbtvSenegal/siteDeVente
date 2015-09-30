@@ -40,8 +40,8 @@ require.def("vente/static/formatters/produitformatter",
                     bouton.addClass("produitFocus");
                     image.addClass("imageFocus");
                   	self._componentTexte.texte.setText(item.details);
-                  	var suivant = getChildWidget("produit"+(parseInt(item.img)+1));
-                  	suivant.addClass("produitDroite");
+                  	//var suivant = getChildWidget("produit"+(parseInt(item.img)+1));
+                  	//suivant.addClass("produitDroite");
 
                 });
 

@@ -312,6 +312,13 @@ initial element background in the base stylesheet, not in dynamically loaded sty
 {
     transform: rotateY(45deg);
 }
-#carouselProduits:focus .produitBouton:not(:focus){
+#carouselProduits:focus .produitBouton:not(:focus)
+{
     transform: rotateY(45deg);
+}
+
+#acheterArticle
+{
+    width: 20px;
+    height: 20px;
 }
