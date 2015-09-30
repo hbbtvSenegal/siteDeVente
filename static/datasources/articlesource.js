@@ -29,21 +29,70 @@ require.def("vente/static/datasources/articlesource",
 								{ 
 									"id": "1", 
 									"titre": "chemise", 
-									"img" : "static/image/tof1.png",
+									"img" : "static/image/pantalon1.png",
 									"lien" :  "sites/sitehabillement.php",
 									"details" : "Tout sur l'habillement"
 								}, 
 								{ 
 									"id": "2", 
-									"titre": "veste", 
-									"img" : "static/image/tof2.png",
+									"titre": "robe", 
+									"img" : "static/image/robe1.png",
 									"lien" :  "sites/sitehabillement.php",
 									"details" : "Tout sur l'habillement"
 								}, 
 								{ 
 									"id": "3", 
 									"titre": "pantalon", 
-									"img" : "static/image/tof1.png",
+									"img" : "static/image/pantalon2.png",
+									"lien" :  "sites/sitehabillement.php",
+									"details" : "Tout sur l'habillement"
+								},
+								{ 
+									"id": "4", 
+									"titre": "chemise", 
+									"img" : "static/image/chemise2.png",
+									"lien" :  "sites/sitehabillement.php",
+									"details" : "Tout sur l'habillement"
+								}, 
+								{ 
+									"id": "5", 
+									"titre": "chemise", 
+									"img" : "static/image/chemise3.png",
+									"lien" :  "sites/sitehabillement.php",
+									"details" : "Tout sur l'habillement"
+								}, 
+								{ 
+									"id": "6", 
+									"titre": "pantalon", 
+									"img" : "static/image/pantalon3.png",
+									"lien" :  "sites/sitehabillement.php",
+									"details" : "Tout sur l'habillement"
+								}, 
+								{ 
+									"id": "7", 
+									"titre": "tee-shirt", 
+									"img" : "static/image/teeshirt2.png",
+									"lien" :  "sites/sitehabillement.php",
+									"details" : "Tout sur l'habillement"
+								}, 
+								{ 
+									"id": "8", 
+									"titre": "tee-shirt", 
+									"img" : "static/image/teeshirt3.png",
+									"lien" :  "sites/sitehabillement.php",
+									"details" : "Tout sur l'habillement"
+								}, 
+								{ 
+									"id": "9", 
+									"titre": "veste", 
+									"img" : "static/image/veste1_homme.png",
+									"lien" :  "sites/sitehabillement.php",
+									"details" : "Tout sur l'habillement"
+								}, 
+								{ 
+									"id": "10", 
+									"titre": "tee-shirt", 
+									"img" : "static/image/teeshirt8.png",
 									"lien" :  "sites/sitehabillement.php",
 									"details" : "Tout sur l'habillement"
 								}							
