@@ -95,6 +95,55 @@ require.def("vente/static/datasources/articlesource",
 									"img" : "static/image/teeshirt8.png",
 									"lien" :  "sites/sitehabillement.php",
 									"details" : "Tout sur l'habillement"
+								},
+								{ 
+									"id": "11", 
+									"titre": "chemise", 
+									"img" : "static/image/chemise4.png",
+									"lien" :  "sites/sitehabillement.php",
+									"details" : "Tout sur l'habillement"
+								}, 
+								{ 
+									"id": "12", 
+									"titre": "chemise", 
+									"img" : "static/image/chemise5.png",
+									"lien" :  "sites/sitehabillement.php",
+									"details" : "Tout sur l'habillement"
+								}, 
+								{ 
+									"id": "13", 
+									"titre": "pantalon", 
+									"img" : "static/image/pantalon6.png",
+									"lien" :  "sites/sitehabillement.php",
+									"details" : "Tout sur l'habillement"
+								}, 
+								{ 
+									"id": "14", 
+									"titre": "tee-shirt", 
+									"img" : "static/image/teeshirt6.png",
+									"lien" :  "sites/sitehabillement.php",
+									"details" : "Tout sur l'habillement"
+								}, 
+								{ 
+									"id": "15", 
+									"titre": "tee-shirt", 
+									"img" : "static/image/teeshirt7.png",
+									"lien" :  "sites/sitehabillement.php",
+									"details" : "Tout sur l'habillement"
+								}, 
+								{ 
+									"id": "16", 
+									"titre": "veste", 
+									"img" : "static/image/veste4_homme.png",
+									"lien" :  "sites/sitehabillement.php",
+									"details" : "Tout sur l'habillement"
+								}, 
+								{ 
+									"id": "17", 
+									"titre": "tee-shirt", 
+									"img" : "static/image/teeshirt5.png",
+									"lien" :  "sites/sitehabillement.php",
+									"details" : "Tout sur l'habillement"
 								}							
 						],
 						"villa":[

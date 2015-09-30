@@ -40,7 +40,7 @@ require.def("vente/js/article",
 				this._formatter = new ArticleFormatter(this._application);
 
 				this._carousel = new HorizontalCarousel("carouselArticle", this._formatter);
-				this._carousel._setNavigation("finie");
+				this._carousel._setNavigation("infinie");
 
 				//le menu de la page
 				self.appendChildWidget(this._carousel);

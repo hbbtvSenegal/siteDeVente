@@ -322,3 +322,27 @@ initial element background in the base stylesheet, not in dynamically loaded sty
     width: 20px;
     height: 20px;
 }
+
+.articleBouton
+{
+    
+    transform: rotateY(45deg);
+   margin-left: -20px;
+   margin-right: -20px;
+   margin-top: 10px;
+   margin-bottom:10px;
+    transition: all .45s;
+    padding: 0px;
+}
+.articleFocus
+{
+    height: 240px;
+    width: 200px;
+    transform: rotateY(0deg) scale(1.3);
+    margin-top: 5px;
+    margin-bottom:5px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: blue;
+    
+}
